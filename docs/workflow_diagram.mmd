@@ -1,0 +1,42 @@
+graph TB
+    subgraph "Customer Onboarding Workflow"
+        A[Customer Fills Jotform] --> B[Cloudflare Webhook]
+        B --> C[Store in Neon DB]
+        B --> D[Create Stripe Customer]
+        B --> E[Send PayPal Invoice]
+        B --> F[Create Todoist Tasks]
+        B --> G[Create Linear Issue]
+        B --> H[Create Notion Page]
+    end
+    
+    subgraph "Error Monitoring Workflow"
+        I[Sentry Detects Error] --> J[Alert to Cloudflare]
+        J --> K[Create Linear Issue]
+        J --> L[Create GitHub Issue]
+        J --> M[Assign Todoist Task]
+        J --> N[Serena Code Search]
+        J --> O[Log in Notion]
+    end
+    
+    subgraph "Marketing Campaign Workflow"
+        P[Plan Campaign] --> Q[Firecrawl Competitor Data]
+        P --> R[Generate Invideo Video]
+        P --> S[Update Webflow Page]
+        P --> T[Create Jotform Form]
+        P --> U[Deploy Cloudflare Edge]
+        P --> V[Create Linear Tasks]
+        P --> W[Document in Notion]
+    end
+    
+    subgraph "Deployment Pipeline Workflow"
+        X[GitHub Commit] --> Y[Run Playwright Tests]
+        Y --> Z[Deploy to Vercel]
+        Z --> AA[Enable Sentry Monitoring]
+        AA --> AB[Update Linear Status]
+        AB --> AC[Document in Notion]
+    end
+    
+    style A fill:#90EE90
+    style I fill:#FFB6C1
+    style P fill:#87CEEB
+    style X fill:#DDA0DD
