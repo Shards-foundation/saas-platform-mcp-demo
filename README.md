@@ -21,28 +21,32 @@ Cloudflare, Webflow, Stripe, Playwright, Prisma Postgres, Invideo, PopHIVE, Sent
 
 ## Key Resources
 
-- **GitHub Repository**: https://github.com/ayais12210-hub/saas-platform-mcp-demo
-- **Notion Documentation**: https://www.notion.so/28b4737b105681c49b1eea7f0c438765
-- **Linear Project**: https://linear.app/mind-forg3/issue/MIN-6
-- **Jotform**: https://form.jotform.com/252856737673068
+- **GitHub Repository**: <https://github.com/ayais12210-hub/saas-platform-mcp-demo>
+- **Notion Documentation**: <https://www.notion.so/28b4737b105681c49b1eea7f0c438765>
+- **Linear Project**: <https://linear.app/mind-forg3/issue/MIN-6>
+- **Jotform**: <https://form.jotform.com/252856737673068>
 
 ## Automated Workflows
 
 ### 1. Customer Onboarding
+
 Jotform → Cloudflare → Neon → Stripe → PayPal → Todoist → Linear → Notion
 
 ### 2. Error Monitoring
+
 Sentry → Linear → GitHub → Todoist → Serena → Notion
 
 ### 3. Marketing Campaign
+
 Firecrawl → Invideo → Webflow → Jotform → Cloudflare → Linear → Notion
 
 ### 4. Deployment Pipeline
+
 GitHub → Playwright → Vercel → Sentry → Linear → Notion
 
 ## Project Structure
 
-```
+```text
 saas-platform/
 ├── api/                    # Integration orchestrator
 ├── frontend/               # Customer portal (planned)
